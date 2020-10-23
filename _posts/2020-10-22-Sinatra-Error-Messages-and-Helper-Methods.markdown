@@ -4,8 +4,11 @@ title:      "Sinatra Error Messages and Helper Methods"
 date:       2020-10-22 06:35:34 -0400
 permalink:  sinatra_error_messages_and_helper_methods
 ---
+In this blog, I will explain two important parts of my Sinatra project.
 
-Sometimes we want to show little messages to our users like error message for empty login fields or success message for doing something successfully like sign in, sign out, or submit a form. Sinatra Flash is an awesome gem that allows you to interact with the user via messages
+Error Messages 
+
+Sometimes we want to show little messages to our users like error message for empty login fields or success message for doing something successfully like sign in, sign out, or submit a form. Sinatra Flash is an awesome gem that allows you to interact with the user via messages.
 
 Here's how to set it up!
 
@@ -34,12 +37,12 @@ Flash stores its messages as a hash. So for seeing the content of Flash message,
 
 Try to use a descriptive word as the key! For example, if your flash is warning your user of a potential problem, you could use flash[:warning]. predefined keys are: :notice, :error, :warning, :alert, :info, :success.
 
-The under link really helped me for adding Flash message in my project.
+The under link helped me to add Flash message in my project.
 
-https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955
+(https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955)
 
 
-Helper method
+Helper methods
 
 Helper methods are the way we can wrap some repetitive codes into a single method in order to save some work and also make the codes look more semantically clear but at the same time, these methods don’t actually belong to any models we already have.
 
