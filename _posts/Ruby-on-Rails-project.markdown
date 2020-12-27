@@ -1,8 +1,8 @@
 ---
 layout: post
-title:      "Ruby on Rails Project"
+title:      "Active Record Associations on Rails"
 date:       2020-10-22 06:35:34 -0400
-permalink:  ruby_on_rails_project
+permalink:  active_record_associations_on_rails
 ---
 
 To demonstrate the principles of working with Ruby on Rails, I decided to build a small part of Netflix.
