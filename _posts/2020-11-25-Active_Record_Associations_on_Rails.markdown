@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Active Record Associations on Rails"
-date:       2020-10-22 06:35:34 -0400
+date:       2020-11-25 04:35:34 -0400
 permalink:  active_record_associations_on_rails
 ---
 
