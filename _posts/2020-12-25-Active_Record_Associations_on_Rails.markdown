@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Active Record Associations on Rails"
-date:       2020-11-25 04:35:34 -0400
+date:       2020-12-25 04:35:34 -0400
 permalink:  active_record_associations_on_rails
 ---
 
@@ -9,12 +9,6 @@ To demonstrate the principles of working with Ruby on Rails, I decided to build 
 
 My data model has User, Video, Genre, and Review. Each video and genre will be able to be created, read, edited, and deleted. Video and Genre has many-to-many connection through genres_videos. There will also be reviews associated with each individual video. Reviews will be able to be created and read through users. So I have another many-to-many connection between User and Video models through reviews.
 
-For building a web application using Rails framework, I highly recommanded to read :
-
-https://guides.rubyonrails.org/index.html
-
-It's an awesome documentation to learn about Ruby on Rails.
-          
 In this blog post, I want to talk about one of the important part of my Rails project, Active Record Associations.
 
 As you see I have two many-to-many connections in my project. One between Video and Genre through genres_videos, and the other between User and Video through reviews.
@@ -91,6 +85,12 @@ Choosing Between has_many :through and has_and_belongs_to_many
 The simplest rule of thumb is that you should set up a has_many :through relationship if you need to work with the relationship model as an independent entity. If you don't need to do anything with the relationship model, it may be simpler to set up a has_and_belongs_to_many relationship (though you'll need to remember to create the joining table in the database).
 
 You should use has_many :through if you need validations, callbacks, or extra attributes on the join model.
+
+For building a web application using Rails framework, I highly recommanded to read :
+
+https://guides.rubyonrails.org/index.html
+
+It's an awesome documentation to learn about Ruby on Rails.
         
 One more note, for creating Join Tables for has_and_belongs_to_many Associations, Active Record creates the name by using the lexical order of the class names. And join table should created without a primary key. For example in my project The join table name should be genres_videos not videos_genres.
 
